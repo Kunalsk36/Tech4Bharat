@@ -48,11 +48,10 @@ export default function Header() {
           className="hidden md:flex gap-8 font-medium text-[15px]"
           style={{ color: "var(--nav-lavender)" }}
         >
-<<<<<<< Updated upstream
           {[
             { name: "Home", href: "/" },
             { name: "About Us", href: "/about-us" },
-            { name: "Previous Activities", href: "#" },
+            { name: "Previous Activities", href: "/previous-activities" },
             { name: "Our Workshops", href: "/our-workshop" },
             { name: "Contact Us", href: "/contact" },
           ].map((item) => (
@@ -73,27 +72,6 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-=======
-          <a
-            href="#"
-            className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">Home</a>
-
-          <a
-            href="#"
-            className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">About Us</a>
-
-          <a
-            href="/previous-activities"
-            className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">Previous Activities</a>
-
-          <a
-            href="/our-workshop"
-            className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">Our Workshops</a>
-
-          <a
-            href="/contact"
-            className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">Contact Us</a>
->>>>>>> Stashed changes
         </nav>
 
         {/* MOBILE MENU BUTTON */}
@@ -131,7 +109,7 @@ export default function Header() {
           {[
             { name: "Home", href: "/" },
             { name: "About Us", href: "/about-us" },
-            { name: "Previous Activities", href: "#" },
+            { name: "Previous Activities", href: "/previous-activities" },
             { name: "Our Workshops", href: "/our-workshop" },
             { name: "Contact Us", href: "/contact" },
           ].map((item) => (
@@ -151,8 +129,6 @@ export default function Header() {
         </nav>
       </div>
 
-
-      
     </header>
   );
 }

@@ -290,7 +290,7 @@ export default function PreviousActivitiesPage() {
           {/* ======================================================
     INTERNSHIP – CENTRE OF EXCELLENCE IN AI, VJTI
 ====================================================== */}
-          <section className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-12 hover:shadow-2xl transition-all">
+          <section id="internship" className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-12 hover:shadow-2xl transition-all">
 
             {/* Header */}
             <div className="mb-10 text-center">

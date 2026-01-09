@@ -11,14 +11,7 @@ export default function ContactPage() {
       <Header />
 
       <ContactUs />
-<<<<<<< Updated upstream
-      <Footer/>
-    </>  
-)
-=======
-
       <Footer />
     </>
   )
->>>>>>> Stashed changes
 }
