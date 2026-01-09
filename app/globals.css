@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-html, body {
-  overflow-x: hidden;
-}
-
 /* ===============================
    CSS VARIABLES
 ================================ */
@@ -175,6 +171,58 @@ body {
 }
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.auto-scroll {
+  animation: scroll-x 40s linear infinite;
+}
+
+.auto-scroll:hover {
+  animation-play-state: paused;
+}
+
+
+
+/* ===============================
+   FORCE HIDE PAGE SCROLLBARS
+================================ */
+
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html,
+body {
+  scrollbar-width: none;
+}
+
+/* IE / old Edge */
+html,
+body {
+  -ms-overflow-style: none;
+}
+/* ===============================
+   HIDE SCROLLBAR FOR CONTAINERS
+================================ */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 @keyframes scroll-x {

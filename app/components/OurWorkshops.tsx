@@ -113,36 +113,46 @@ export default function OurWorkshop() {
               </ul>
             </div>
 
+          {/* RIGHT ICON GRID */}
+          <div className="grid grid-cols-2 gap-6">
 
-            {/* ===============================
-                RIGHT ICON GRID
-            ================================ */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                { title: "Digital Governance & DPI", icon: <GovernanceIcon /> },
-                { title: "AI & Emerging Tech Policies", icon: <AIIcon /> },
-                { title: "Cyber-Physical & Energy Systems", icon: <CyberIcon /> },
-                { title: "Technostrategic Decision Making", icon: <StrategyIcon /> },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className={`rounded-2xl p-6
-                              text-center text-white
-                              shadow-md
-                              bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
-                              reveal delay-${(index % 4) + 1}`}
-                >
-                  <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center text-white/90">
-                    {item.icon}
-                  </div>
+            {[
+                {
+                    title: "Digital Governance & DPI",
+                    icon: <GovernanceIcon />,
+                },
+                {
+                    title: "AI & Emerging Tech Policies",
+                    icon: <AIIcon />,
+                },
+                {
+                    title: "Cyber-Physical & Energy Systems",
+                    icon: <CyberIcon />,
+                },
+                {
+                    title: "Technostrategic Decision Making",
+                    icon: <StrategyIcon />,
+                },
+                ].map((item, index) => (
 
-                  <p className="text-sm font-medium leading-snug">
-                    {item.title}
-                  </p>
-                </div>
-              ))}
-            </div>
+              <div
+                key={index}
+                className="rounded-2xl p-6 text-center text-white shadow-md
+                           bg-gradient-to-br from-[#ac84b6] to-[#d476c6]"
+              >
+                {/* Icon Placeholder */}
+                <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center text-white/90">
+  {item.icon}
+</div>
 
+
+                <p className="text-sm font-medium leading-snug">
+                  {item.title}
+                </p>
+              </div>
+            ))}
+
+          </div>
           </div>
         </div>
 

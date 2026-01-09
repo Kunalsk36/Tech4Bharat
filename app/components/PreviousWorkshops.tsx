@@ -110,7 +110,6 @@ export default function PreviousWorkshops() {
                 desc={item.desc}
               />
             ))}
-
           </div>
         </div>
 
