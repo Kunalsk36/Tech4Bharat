@@ -7,11 +7,18 @@ import Footer from "../components/Footer";
 
 export default function ContactPage() {
   return (
-<>
+    <>
       <Header />
-      
+
       <ContactUs />
+<<<<<<< Updated upstream
       <Footer/>
     </>  
 )
+=======
+
+      <Footer />
+    </>
+  )
+>>>>>>> Stashed changes
 }
