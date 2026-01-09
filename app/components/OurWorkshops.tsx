@@ -1,3 +1,7 @@
+/* ===============================
+   ICON COMPONENTS
+================================ */
+
 const GovernanceIcon = () => (
   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -37,15 +41,30 @@ const StrategyIcon = () => (
     <path d="M8 12h4M12 8v4M14 12h4M12 14v4" />
   </svg>
 );
+
+
+/* ===============================
+   COMPONENT: OUR WORKSHOP
+================================ */
+
 export default function OurWorkshop() {
   return (
-    <section className="relative py-15 sm:py-15">
-      {/* MAIN CONTAINER */}
-      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl
-                      px-6 sm:px-10 lg:px-12 py-16">
+    /* SECTION WRAPPER */
+    <section className="relative py-15 sm:py-15 reveal">
 
-        {/* SECTION HEADER */}
-        <div className="text-center mb-12 sm:mb-14">
+      {/* MAIN GLASS CONTAINER */}
+      <div
+        className="max-w-6xl mx-auto
+                   bg-white/90 backdrop-blur-lg
+                   rounded-3xl shadow-xl
+                   px-6 sm:px-10 lg:px-12
+                   py-16"
+      >
+
+        {/* ===============================
+            SECTION HEADER
+        ================================ */}
+        <div className="text-center mb-12 sm:mb-14 reveal delay-1">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
             Our Workshop
           </h2>
@@ -54,20 +73,28 @@ export default function OurWorkshop() {
           </p>
         </div>
 
-        {/* INNER CONTENT CONTAINER */}
-        <div className="
-          bg-[#faf7fc] rounded-2xl
-          px-6 sm:px-10 py-10 sm:py-12
-          shadow-inner
-          transition-all duration-300 ease-out
-          hover:shadow-2xl
-          sm:hover:-translate-y-1
-        ">
+
+        {/* ===============================
+            INNER CONTENT CARD
+        ================================ */}
+        <div
+          className="
+            bg-[#faf7fc] rounded-2xl
+            px-6 sm:px-10 py-10 sm:py-12
+            shadow-inner
+            transition-all duration-300 ease-out
+            hover:shadow-2xl
+            sm:hover:-translate-y-1
+            reveal delay-2
+          "
+        >
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
 
-            {/* LEFT CONTENT */}
-            <div>
+            {/* ===============================
+                LEFT CONTENT
+            ================================ */}
+            <div className="reveal delay-3">
               <h3 className="text-xl sm:text-2xl font-semibold text-[#5e226d] mb-4">
                 Digital & Tech Policy Workshop
               </h3>
@@ -86,7 +113,10 @@ export default function OurWorkshop() {
               </ul>
             </div>
 
-            {/* RIGHT ICON GRID */}
+
+            {/* ===============================
+                RIGHT ICON GRID
+            ================================ */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 { title: "Digital Governance & DPI", icon: <GovernanceIcon /> },
@@ -96,8 +126,11 @@ export default function OurWorkshop() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="rounded-2xl p-6 text-center text-white shadow-md
-                             bg-gradient-to-br from-[#ac84b6] to-[#d476c6]"
+                  className={`rounded-2xl p-6
+                              text-center text-white
+                              shadow-md
+                              bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
+                              reveal delay-${(index % 4) + 1}`}
                 >
                   <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center text-white/90">
                     {item.icon}
@@ -109,8 +142,10 @@ export default function OurWorkshop() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

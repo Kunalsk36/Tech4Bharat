@@ -1,6 +1,6 @@
 export default function ByTheNumbers() {
   return (
-    <section className="relative py-15 sm:py-15">
+    <section className="relative py-15 sm:py-15 reveal">
       <div
         className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg
                    rounded-3xl shadow-xl
@@ -9,7 +9,7 @@ export default function ByTheNumbers() {
       >
 
         {/* SECTION HEADER */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-12 sm:mb-16 reveal delay-1">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
             By The Numbers
           </h2>
@@ -26,7 +26,8 @@ export default function ByTheNumbers() {
           <div
             className="bg-white rounded-2xl p-6 sm:p-8 shadow-md
                        hover:shadow-xl transition hover:-translate-y-1
-                       text-center sm:text-left"
+                       text-center sm:text-left
+                       reveal delay-2"
           >
             <h3 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
               500+
@@ -43,7 +44,8 @@ export default function ByTheNumbers() {
           <div
             className="bg-white rounded-2xl p-6 sm:p-8 shadow-md
                        hover:shadow-xl transition hover:-translate-y-1
-                       text-center sm:text-left"
+                       text-center sm:text-left
+                       reveal delay-3"
           >
             <h3 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
               15+
@@ -60,7 +62,8 @@ export default function ByTheNumbers() {
           <div
             className="bg-white rounded-2xl p-6 sm:p-8 shadow-md
                        hover:shadow-xl transition hover:-translate-y-1
-                       text-center sm:text-left"
+                       text-center sm:text-left
+                       reveal delay-4"
           >
             <h3 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
               8

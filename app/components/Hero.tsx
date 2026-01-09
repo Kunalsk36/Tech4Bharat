@@ -1,7 +1,11 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden
-                        bg-gradient-to-br from-[#ac84b6] via-[#d476c6] to-[#9b6fb0]">
+    <section
+      className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden
+                 bg-gradient-to-br from-[#ac84b6] via-[#d476c6] to-[#9b6fb0]"
+    >
 
       {/* Background Image */}
       <div
@@ -20,6 +24,7 @@ export default function Hero() {
                    pb-32 sm:pb-40
                    text-white"
       >
+        {/* HEADING */}
         <h1
           className="fade-up font-extrabold leading-[1.1]
                      text-4xl sm:text-5xl md:text-6xl lg:text-7xl
@@ -28,6 +33,7 @@ export default function Hero() {
           Tech For Bharat
         </h1>
 
+        {/* SUBTEXT */}
         <p
           className="fade-up-delay-1 mt-6 sm:mt-8
                      max-w-3xl text-white/90
@@ -37,27 +43,29 @@ export default function Hero() {
           Empowering India’s youth with cutting-edge technology skills for a brighter future
         </p>
 
+        {/* CTA BUTTON */}
         <div className="fade-up-delay-2 mt-8 sm:mt-10">
-          <button
-            className="hero-btn border border-white
-           px-8 sm:px-10
-           py-4 sm:py-3
-           rounded-full
-           text-base sm:text-lg
-           transition-all duration-300
-           hover:bg-white hover:text-[#ac84b6]
-           hover:scale-105"
-
-          >
-            Learn More
-          </button>
+          <Link href="/about-us">
+            <button
+              className="hero-btn border border-white
+                         px-8 sm:px-10
+                         py-4 sm:py-3
+                         rounded-full
+                         text-base sm:text-lg
+                         transition-all duration-300
+                         hover:bg-white hover:text-[#ac84b6]
+                         hover:scale-105"
+            >
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* BOTTOM CURVE / WAVE */}
       <svg
-        className="absolute bottom-0 left-0 w-full"
-        viewBox="0 0 1440 200"
+        className="absolute -bottom-[1px] left-0 w-full"
+        viewBox="0 0 1440 201"
         preserveAspectRatio="none"
       >
         <defs>
@@ -84,10 +92,9 @@ export default function Hero() {
             M0,120
             C120,160 360,200 720,200
             C1080,200 1320,160 1440,120
-            L1440,200
-            L0,200
-            Z
-          "
+            L1440,201
+            L0,201
+            Z"
         />
       </svg>
     </section>

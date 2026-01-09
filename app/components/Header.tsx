@@ -9,8 +9,8 @@ export default function Header() {
   return (
     <header
       className="
-        w-full bg-[#fee4fe]
-        animate-header
+        w-full bg-[#fee4fe]/70 backdrop-blur-md
+        animate-header sticky top-0 z-50
       "
     >
       <div className="w-full px-6 md:px-8 py-4 flex items-center justify-between">
@@ -94,15 +94,18 @@ export default function Header() {
         `}
       >
         <nav
-          className="
-            flex flex-col gap-4
-            px-6 pb-6
-            font-medium text-base
-            bg-[#fee4fe]
-            animate-mobileMenu
-          "
-          style={{ color: "var(--nav-lavender)" }}
-        >
+  className="
+    flex flex-col gap-4
+    px-6 pb-6
+    font-medium text-base
+    bg-[#fee4fe]/90
+    backdrop-blur-md
+    shadow-lg
+    animate-mobileMenu
+  "
+  style={{ color: "var(--nav-lavender)" }}
+>
+
           {[
             { name: "Home", href: "/" },
             { name: "About Us", href: "/about-us" },

@@ -1,3 +1,7 @@
+/* ===============================
+   DATA: STUDENT TESTIMONIALS
+================================ */
+
 const testimonials = [
   {
     name: "Priya Sharma",
@@ -36,7 +40,7 @@ const testimonials = [
     role: "Public Policy Student",
     institution: "Gokhale Institute, Pune",
     content:
-      "The sessions on technology policy and governance helped me understand how emerging technologies influence national decision-making. The real-world case discussions were especially insightful.",
+      "The sessions on technology policy and governance helped me understand how emerging technologies influence national decision-making.",
     avatar: "SK",
   },
   {
@@ -44,7 +48,7 @@ const testimonials = [
     role: "Electronics Engineering Student",
     institution: "COEP Technological University",
     content:
-      "Learning about cyber-physical systems and clean energy policies gave me a new perspective on how technology and policy work together in real-world infrastructure.",
+      "Learning about cyber-physical systems and clean energy policies gave me a new perspective on real-world infrastructure.",
     avatar: "RD",
   },
   {
@@ -52,7 +56,7 @@ const testimonials = [
     role: "Data Science Student",
     institution: "IISc Bangalore",
     content:
-      "The AI, data governance, and digital public infrastructure sessions were extremely relevant. The policy writing activity helped me apply technical knowledge in a structured way.",
+      "The AI, data governance, and digital public infrastructure sessions were extremely relevant and practical.",
     avatar: "NJ",
   },
   {
@@ -60,23 +64,34 @@ const testimonials = [
     role: "Mechanical Engineering Student",
     institution: "VJTI Mumbai",
     content:
-      "The field visits to C-DAC and Pune International Centre were eye-opening. Seeing high-performance computing systems and real research environments was a memorable experience.",
+      "The field visits to C-DAC and Pune International Centre were eye-opening and memorable.",
     avatar: "KP",
   },
 ];
 
+
+/* ===============================
+   COMPONENT: STUDENT VOICES
+================================ */
+
 export default function StudentVoices() {
   return (
-    <section className="relative py-15 sm:py-15">
+    /* SECTION WRAPPER (Reveal Animation) */
+    <section className="relative py-15 sm:py-15 reveal">
+
+      {/* GLASS CARD CONTAINER */}
       <div
-        className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg
+        className="max-w-6xl mx-auto
+                   bg-white/90 backdrop-blur-lg
                    rounded-3xl shadow-xl
                    px-6 sm:px-10 lg:px-12
                    py-16"
       >
 
-        {/* HEADER */}
-        <div className="text-center mb-12 sm:mb-14">
+        {/* ===============================
+            SECTION HEADER
+        ================================ */}
+        <div className="text-center mb-12 sm:mb-14 reveal delay-1">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
             Student Voices
           </h2>
@@ -87,38 +102,59 @@ export default function StudentVoices() {
           </p>
         </div>
 
-        {/* SCROLLABLE TESTIMONIALS */}
-        <div className="relative -mx-6 sm:-mx-10 lg:-mx-12">
+
+        {/* ===============================
+            HORIZONTAL SCROLL CONTAINER
+            - Horizontal scroll ENABLED
+            - Vertical scroll DISABLED
+            - Scrollbar HIDDEN
+        ================================ */}
+        <div
+          className="relative -mx-6 sm:-mx-10 lg:-mx-12
+                     reveal delay-2
+                     overflow-y-hidden"
+        >
           <div
-            className="flex gap-6 px-6 sm:px-10 lg:px-12
-                       overflow-x-auto scroll-smooth pb-6
+            className="flex gap-6
+                       px-6 sm:px-10 lg:px-12
+                       overflow-x-auto overflow-y-hidden
+                       scroll-smooth
+                       pb-6
                        no-scrollbar"
           >
+
+            {/* ===============================
+                TESTIMONIAL CARDS
+            ================================ */}
             {testimonials.map((item, index) => (
               <div
                 key={index}
-                className="min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
-                           bg-white rounded-2xl p-6 shadow-md
-                           hover:shadow-xl transition
-                           hover:-translate-y-1
-                           border border-transparent"
+                className={`min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
+                            bg-white rounded-2xl p-6
+                            shadow-md
+                            hover:shadow-xl transition
+                            hover:-translate-y-1
+                            border border-transparent
+                            reveal delay-${(index % 4) + 1}`}
               >
+
                 {/* AVATAR */}
                 <div
                   className="w-12 h-12 rounded-full
                              bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
                              text-white font-semibold
-                             flex items-center justify-center mb-4"
+                             flex items-center justify-center
+                             mb-4"
                 >
                   {item.avatar}
                 </div>
 
-                {/* CONTENT */}
+                {/* TESTIMONIAL CONTENT */}
                 <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
                   “{item.content}”
                 </p>
 
-                {/* FOOTER */}
+                {/* FOOTER INFO */}
                 <div className="border-t pt-4">
                   <p className="font-semibold text-[#5e226d]">
                     {item.name}
@@ -127,13 +163,18 @@ export default function StudentVoices() {
                     {item.role} · {item.institution}
                   </p>
                 </div>
+
               </div>
             ))}
+
           </div>
         </div>
 
-        {/* SCROLL HINT */}
-        <p className="text-center text-sm text-gray-400 mt-6">
+
+        {/* ===============================
+            SCROLL HINT
+        ================================ */}
+        <p className="text-center text-sm text-gray-400 mt-6 reveal delay-3">
           ← Scroll horizontally to read more student experiences →
         </p>
 

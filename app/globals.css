@@ -193,3 +193,37 @@ body {
 .auto-scroll:hover {
   animation-play-state: paused;
 }
+
+
+/* ===============================
+   FORCE HIDE PAGE SCROLLBARS
+================================ */
+
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html,
+body {
+  scrollbar-width: none;
+}
+
+/* IE / old Edge */
+html,
+body {
+  -ms-overflow-style: none;
+}
+/* ===============================
+   HIDE SCROLLBAR FOR CONTAINERS
+================================ */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
