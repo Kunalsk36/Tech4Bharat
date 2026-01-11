@@ -77,109 +77,75 @@ const testimonials = [
 export default function StudentVoices() {
   return (
     <section className="relative py-15 sm:py-15 reveal">
-
-      {/* MAIN GLASS CONTAINER */}
-      <div
-        className="
-          max-w-6xl mx-auto
-          bg-gradient-to-b from-[#edeef8] to-[#c5d1ff]
-          backdrop-blur-lg
-          rounded-3xl shadow-xl
-          px-6 sm:px-10 lg:px-12
-          py-16
-        "
-      >
-
+      {/* MAIN CONTAINER */}
+      <div className="max-w-6xl mx-auto bg-gradient-to-b from-[#edeef8] to-[#c5d1ff] backdrop-blur-lg rounded-3xl shadow-xl px-10 sm:px-14 lg:px-12 py-16">
+        
         {/* SECTION HEADER */}
         <div className="text-center mb-12 sm:mb-14 reveal delay-1">
-          <h2
-            className="
-              text-3xl sm:text-4xl font-bold
-              bg-gradient-to-r
-              from-[#020024]
-              via-[#090979]
-              to-[#4f6ff2]
-              bg-clip-text text-transparent
-            "
-          >
+          <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#020024] via-[#090979] to-[#4f6ff2] bg-clip-text text-transparent">
             Student Voices
           </h2>
-
           <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
-            Hear directly from students about their learning experiences
-            and takeaways from Tech For Bharat workshops.
+            Hear directly from students about their learning experiences and takeaways from Tech For Bharat workshops.
           </p>
         </div>
 
         {/* HORIZONTAL SCROLL CONTAINER */}
-        <div
-          className="
-            relative -mx-6 sm:-mx-10 lg:-mx-12
-            reveal delay-2
-            overflow-y-hidden
-          "
-        >
-          <div
-            className="
-              flex gap-6
-              px-6 sm:px-10 lg:px-12
-              overflow-x-auto overflow-y-hidden
-              scroll-smooth
-              pb-6
-              no-scrollbar
-            "
-          >
+        <div className="relative -mx-6 sm:-mx-10 lg:-mx-12 reveal delay-2 overflow-y-hidden">
+          <div className="flex gap-8 px-6 sm:px-10 lg:px-12 overflow-x-auto no-scrollbar scroll-smooth pb-8">
             {testimonials.map((item, index) => (
               <div
                 key={index}
-                className={`
-                  min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
-                  bg-white/60 backdrop-blur-md
-                  rounded-2xl p-6
-                  shadow-md
-                  hover:shadow-xl transition
-                  hover:-translate-y-1
-                  border border-transparent
-                  reveal delay-${(index % 4) + 1}
-                `}
+                className="relative min-w-[300px] sm:min-w-[350px] group"
               >
-                {/* AVATAR */}
-                <div
-                  className="
-                    w-12 h-12 rounded-full
-                    bg-gradient-to-br from-[#4f6ff2] to-[#8fa8ff]
-                    text-white font-semibold
-                    flex items-center justify-center
-                    mb-4
-                  "
-                >
-                  {item.avatar}
+                {/* 1. BACKGROUND ACCENT LAYER (The Blue Frame) */}
+                <div className="absolute inset-0 bg-[#1a36a3] rounded-tr-[60px] rounded-bl-[60px] rounded-tl-2xl rounded-br-2xl translate-x-2 translate-y-2 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300" />
+
+                {/* 2. MAIN CONTENT LAYER (Glassmorphism Card) */}
+                <div className="relative z-10 bg-white/90 backdrop-blur-md p-8 rounded-tr-[60px] rounded-bl-[60px] rounded-tl-2xl rounded-br-2xl border border-white/50 shadow-lg h-full flex flex-col justify-between">
+                  
+                  <div>
+                    {/* FLOATING AVATAR ACCENT */}
+                    <div className="absolute -top-4 -left-4 w-12 h-12 rounded-xl bg-[#4f6ff2] text-white font-bold flex items-center justify-center shadow-lg rotate-[-10deg] group-hover:rotate-0 transition-transform">
+                      {item.avatar}
+                    </div>
+
+                    {/* QUOTE ICON */}
+                    <span className="text-5xl font-serif text-[#4f6ff2]/20 absolute top-4 right-8">“</span>
+                    
+                    <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base italic relative z-10 pt-2">
+                      {item.content}
+                    </p>
+                  </div>
+
+                  {/* FOOTER - PILL STYLE */}
+                  <div className="border-t border-blue-100 pt-4">
+                    <p className="font-bold text-[#020024] text-lg">
+                      {item.name}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      <span className="px-3 py-1 bg-blue-50 text-[#4f6ff2] text-xs font-semibold rounded-full border border-blue-100">
+                        {item.role}
+                      </span>
+                      <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full">
+                        {item.institution}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-
-                {/* CONTENT */}
-                <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
-                  “{item.content}”
-                </p>
-
-                {/* FOOTER */}
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-[#020024]">
-                    {item.name}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {item.role} · {item.institution}
-                  </p>
-                </div>
-
               </div>
             ))}
           </div>
         </div>
 
         {/* SCROLL HINT */}
-        <p className="text-center text-sm text-gray-400 mt-6 reveal delay-3">
-          ← Scroll horizontally to read more student experiences →
-        </p>
+        <div className="flex items-center justify-center gap-4 mt-8 reveal delay-3">
+          <div className="h-[1px] w-12 bg-gray-300"></div>
+          <p className="text-sm font-medium text-gray-500 uppercase tracking-widest">
+            Swipe to Explore
+          </p>
+          <div className="h-[1px] w-12 bg-gray-300"></div>
+        </div>
 
       </div>
     </section>

@@ -84,7 +84,7 @@ export default function PreviousWorkshops() {
       >
 
         {/* SECTION HEADER */}
-        <div className="text-center mb-12 reveal delay-1">
+        <div className="text-center mb-16 reveal delay-1">
           <h2
             className="
               text-3xl sm:text-4xl font-bold
@@ -139,7 +139,7 @@ function WorkshopCard({
   return (
     <div
       className="
-        min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
+        w-96
         bg-white/85 backdrop-blur-lg
         rounded-2xl shadow-lg
         overflow-hidden

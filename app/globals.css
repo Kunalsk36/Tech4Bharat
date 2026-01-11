@@ -162,9 +162,15 @@ body {
 }
 
 /* Card glow */
-.card-glow:hover {
-  box-shadow: 0 20px 40px rgba(212,118,198,0.25);
+.card-glow {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
+
+.card-glow:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(106, 173, 207, 0.25);
+}
+
 
 /* for previousworkshops auto-scrolling */
 @keyframes scroll {

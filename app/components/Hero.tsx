@@ -37,7 +37,7 @@ export default function Hero() {
       <div
         className="
           relative z-10 max-w-6xl mx-auto
-          px-6 sm:px-8
+          px-1 sm:px-1
           pt-28 sm:pt-32 md:pt-36
           pb-32 sm:pb-40
           text-white

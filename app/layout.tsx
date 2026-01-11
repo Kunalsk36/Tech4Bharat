@@ -1,10 +1,10 @@
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 
 /* ===============================
    FONT SETUP
 ================================ */
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -32,9 +32,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
 
-      
-      <body className={poppins.className}>
-        {/* Full-page gradient wrapper */}
+      <body className={inter.className}>
+        {/* Full-page wrapper */}
         <div className="min-h-screen w-full">
           {children}
         </div>
@@ -42,4 +41,3 @@ export default function RootLayout({
     </html>
   );
 }
-
